@@ -10,3 +10,6 @@ build-mo: $(patsubst %.po,%.mo,$(wildcard *.po))
 
 update-po:
 	pygettext -a -D ../pastebinit
+	@-$(foreach po,$(wildcard *.po), \
+		msgmerge --update $(po) messages.pot; \
+	)
