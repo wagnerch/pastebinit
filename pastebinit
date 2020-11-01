@@ -283,7 +283,7 @@ try:
         print(_("KeyboardInterrupt caught."), file=sys.stderr)
         sys.exit(1)
     except getopt.GetoptError as e:
-        print(_("Invalid arguments: %s!" % e)+"\n", file=sys.stderr)
+        print(_("Invalid arguments: %s!") % e + "\n", file=sys.stderr)
         Usage(sys.stderr)
         sys.exit(1)
 
